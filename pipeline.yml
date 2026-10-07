@@ -1,0 +1,46 @@
+name: Pipeline CI/CD
+
+on:
+ push:
+  branches: [main]
+ pull_request:
+  branches: [main]
+ workflow_dispatch:
+ 
+env:
+  DOTNET_VERSION: '8.0.x'
+
+  
+
+jobs:
+ build-e-tests:
+  name: Build e Testes
+  runs-on: ubuntu-latest
+
+  steps:
+   - name: Baixar Codigo (Checkout)
+     uses: actions/checkout@v5
+   
+   - name: Instalar o .NET ${{ env.DOTNET_VERSION }}
+     uses: actions/setup-dotnet@v5
+     with:
+      dotnet-version: ${{ env.DOTNET_VERSION }}
+
+   - name: Restaurar Dependencias
+     run: dotnet restore
+
+   - name: Compilar (Release)
+     run: dotnet build  --no-restore --configuration Release 
+
+   - name: Executar Testes
+     run: >
+        dotnet test --no-build --verbosity normal
+        --logger "trx;LogFileName=test_results.trx"
+        --results-directory TestResults
+
+   - name: Guardar o resultad dos testes
+     if: always()
+     uses: actions/upload-artifact@v4
+     with:
+        name: resultados-dos-testes
+        path: TestResults
