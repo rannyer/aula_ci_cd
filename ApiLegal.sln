@@ -1,9 +1,23 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.37411.7 d17.14
+VisualStudioVersion = 17.14.37411.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiLegal", "ApiLegal\ApiLegal.csproj", "{A312FAAE-0638-46FA-8D4F-588C3936D8BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiLegal.Tests", "ApiLegal.Tests\ApiLegal.Tests.csproj", "{3D23E3B8-6E26-42C6-BBC0-14C3CED3527F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{F92BA065-E67D-49A1-9C2F-1EEB80F3BA5F}"
+	ProjectSection(SolutionItems) = preProject
+		pipeline.yml = pipeline.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens de Solução", "{380A7511-A354-6D7A-0CC0-8FA1F1BA7B6C}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +29,16 @@ Global
 		{A312FAAE-0638-46FA-8D4F-588C3936D8BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A312FAAE-0638-46FA-8D4F-588C3936D8BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A312FAAE-0638-46FA-8D4F-588C3936D8BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D23E3B8-6E26-42C6-BBC0-14C3CED3527F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D23E3B8-6E26-42C6-BBC0-14C3CED3527F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D23E3B8-6E26-42C6-BBC0-14C3CED3527F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D23E3B8-6E26-42C6-BBC0-14C3CED3527F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F92BA065-E67D-49A1-9C2F-1EEB80F3BA5F} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DFCD4C12-0148-40A9-99E4-94B1FB54C55C}
