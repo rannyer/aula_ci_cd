@@ -4,7 +4,7 @@
     {
         public decimal CalcularDesconto(decimal valorOriginal, string? cupom)
         {
-           if (valorOriginal < 0)
+           if (valorOriginal <= 0)
             {
                 throw new ArgumentException("O valorr original não pode ser negativo.");
             }
