@@ -24,6 +24,7 @@ namespace ApiLegal.Tests
         [InlineData("aluno10", 100, 90)]
         [InlineData("     ALUNO10", 100, 90)]
         [InlineData("BLACKFRIDAY", 200, 140)]
+        [InlineData("NATAL", 100, 85)]
         [InlineData("CUPOMFALSE", 100, 100)]
         public void CuponsConhecidos_AplicamDesconto(string cupom, int valorOriginal, int valorEsperado)
         {

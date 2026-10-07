@@ -13,7 +13,8 @@
             {
                 "ALUNO10" => 0.10m,
                 "BLACKFRIDAY" => 0.30m,
-                _ => 0
+                "NATAL" => 0.15m,
+                _ => 0 
             };
             return Math.Round(valorOriginal * (1 - percentual), 2);
         }
