@@ -12,7 +12,7 @@
             decimal percentual = cupom?.Trim().ToUpper() switch
             {
                 "ALUNO10" => 0.10m,
-                "BLACKFRIDAY" => 0.30m,
+                "BLACKFRIDAY" => 0.10m,
                 _ => 0
             };
             return Math.Round(valorOriginal * (1 - percentual), 2);
